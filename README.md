@@ -1,6 +1,6 @@
 # PureCSS - Responsive Tesla Logo
 
-Responsive Responsive Tesla Logo using HTML and CSS
+Responsive Tesla Logo using HTML and CSS
 
 [Visit Tesla Website](https://www.tesla.com)
 

@@ -1,0 +1,235 @@
+// colors
+$bg-color: #fff;
+$logo-color: #e81b22;
+
+@mixin shape($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background: $background;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: $bg-color;
+  overflow: hidden;
+
+  * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+  }
+}
+
+.logo {
+  width: 62vmin;
+  height: 79vmin;
+  background: transparent;
+  overflow: hidden;
+
+  .shape-container {
+    @include shape(56vmin, 34vmin, transparent);
+    border-radius: 100%;
+    top: -73vmin;
+    overflow: hidden;
+
+    .shape {
+      @include shape(68.5vmin, 30vmin, $logo-color);
+      border-radius: 100%;
+      top: 31vmin;
+      left: -6.25vmin;
+      border: 1.8vmin solid $bg-color;
+      overflow: hidden;
+      box-shadow: 0 0 0 3.5vmin $logo-color;
+
+      &::before {
+        @include shape(35.6vmin, 9vmin, $bg-color);
+        border-radius: 15vmin;
+        left: 14.6vmin;
+        top: 6.5vmin;
+      }
+
+      .triangle-small {
+        z-index: 2;
+        width: 0;
+        height: 0;
+        border-left: 6vmin solid transparent;
+        border-right: 6vmin solid transparent;
+        border-top: 7.3vmin solid $bg-color;
+        top: -19.2vmin;
+        left: -0.4vmin;
+      }
+    }
+
+    .remove-line-top {
+      @include shape(11.2vmin, 1vmin, $bg-color);
+      left: -0.3vmin;
+      top: 4.8vmin;
+      border-radius: 2vmin;
+      z-index: 3;
+    }
+  }
+
+  .remove-line-bottom {
+    @include shape(20vmin, 3vmin, $bg-color);
+    top: -43vmin;
+    left: -16.2vmin;
+    transform: rotate(10deg);
+    border-radius: 3vmin;
+
+    &::before {
+      @include shape(20vmin, 3vmin, $bg-color);
+      transform: rotate(-20deg);
+      border-radius: 3vmin;
+      left: 17vmin;
+      top: -2.05vmin;
+    }
+  }
+
+  .remove-line-left {
+    @include shape(1.62vmin, 1.62vmin, $bg-color);
+    top: -60.2vmin;
+    left: -51vmin;
+    transform: rotate(-25deg);
+  }
+
+  .remove-line-right {
+    @include shape(1.62vmin, 1.62vmin, $bg-color);
+    top: -60.2vmin;
+    left: 51vmin;
+    transform: rotate(25deg);
+  }
+
+  .triangle-big {
+    width: 0;
+    height: 0;
+    border-left: 8vmin solid transparent;
+    border-right: 8vmin solid transparent;
+    border-top: 45vmin solid $logo-color;
+    top: -13vmin;
+    left: -0.3vmin;
+
+    &::before {
+      @include shape(1vmin, 1vmin, $bg-color);
+      left: -0.5vmin;
+      top: -0.5vmin;
+    }
+  }
+
+  .title {
+    width: 67vmin;
+    height: 9.2vmin;
+    background: transparent;
+    position: relative;
+    top: 70.8vmin;
+    left: -5vmin;
+
+    .t {
+      @include shape(10vmin, 1.6vmin, $logo-color);
+      left: -46.4vmin;
+      top: -7.2vmin;
+      border-bottom-right-radius: 4vmin;
+      border-bottom-left-radius: 4vmin;
+
+      &::before {
+        @include shape(1.5vmin, 7.5vmin, $logo-color);
+        left: 4.25vmin;
+        top: 0.3vmin;
+      }
+    }
+
+    .e {
+      @include shape(9vmin, 1.6vmin, $logo-color);
+      left: -19.8vmin;
+      top: -7.2vmin;
+      border-bottom-right-radius: 4vmin;
+      border-bottom-left-radius: 4vmin;
+
+      &::before {
+        @include shape(9vmin, 1.6vmin, $logo-color);
+        border-bottom-right-radius: 4vmin;
+        border-bottom-left-radius: 4vmin;
+        top: 3.1vmin;
+      }
+
+      &::after {
+        @include shape(9vmin, 1.6vmin, $logo-color);
+        border-bottom-right-radius: 4vmin;
+        border-bottom-left-radius: 4vmin;
+        top: 6.3vmin;
+      }
+    }
+
+    .s-1 {
+      @include shape(8.7vmin, 1.6vmin, $logo-color);
+      left: 6.8vmin;
+      top: -7.2vmin;
+      border-bottom-right-radius: 4vmin;
+
+      &::before {
+        @include shape(1.56vmin, 4vmin, $logo-color);
+      }
+
+      &::after {
+        @include shape(8.7vmin, 1.5vmin, $logo-color);
+        top: 3.2vmin;
+      }
+    }
+
+    .s-2 {
+      @include shape(8.9vmin, 1.4vmin, $logo-color);
+      left: 6.3vmin;
+      top: 5.3vmin;
+      border-top-left-radius: 4vmin;
+
+      &::before {
+        @include shape(1.6vmin, 4.3vmin, $logo-color);
+        left: 7.5vmin;
+        top: -2.9vmin;
+      }
+    }
+
+    .l {
+      @include shape(1.5vmin, 7.85vmin, $logo-color);
+      left: 25.7vmin;
+      top: -0.9vmin;
+
+      &::before {
+        @include shape(8.4vmin, 1.4vmin, $logo-color);
+        top: 6.5vmin;
+        border-bottom-right-radius: 4vmin;
+      }
+    }
+
+    .a {
+      @include shape(9vmin, 1.6vmin, $logo-color);
+      border-bottom-right-radius: 4vmin;
+      border-bottom-left-radius: 4vmin;
+      left: 56.2vmin;
+      top: -7.2vmin;
+
+      &::before {
+        @include shape(8.7vmin, 4.6vmin, $logo-color);
+        left: 0.2vmin;
+        top: 3.2vmin;
+      }
+
+      &::after {
+        @include shape(5.6vmin, 3.2vmin, $bg-color);
+        left: 1.7vmin;
+        top: 4.7vmin;
+      }
+    }
+  }
+}

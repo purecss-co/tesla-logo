@@ -36,28 +36,28 @@ body {
     width: 56vmin;
     height: 34vmin;
     background: transparent;
-    border-radius: 100%;
     top: -73vmin;
+    border-radius: 100%;
     overflow: hidden;
 
     .shape {
       width: 68.5vmin;
       height: 30vmin;
       background: $logo-color;
-      border-radius: 100%;
       top: 31vmin;
       left: -6.25vmin;
-      border: 1.8vmin solid $bg-color;
       overflow: hidden;
+      border: 1.8vmin solid $bg-color;
+      border-radius: 100%;
       box-shadow: 0 0 0 3.5vmin $logo-color;
 
       &::before {
         width: 35.6vmin;
         height: 9vmin;
         background: $bg-color;
-        border-radius: 15vmin;
-        left: 14.6vmin;
         top: 6.5vmin;
+        left: 14.6vmin;
+        border-radius: 15vmin;
       }
 
       .triangle-small {
@@ -73,13 +73,13 @@ body {
     }
 
     .remove-line-top {
+      z-index: 3;
       width: 11.2vmin;
       height: 1vmin;
       background: $bg-color;
-      left: -0.3vmin;
       top: 4.8vmin;
+      left: -0.3vmin;
       border-radius: 2vmin;
-      z-index: 3;
     }
   }
 
@@ -96,10 +96,10 @@ body {
       width: 20vmin;
       height: 3vmin;
       background: $bg-color;
+      top: -2.05vmin;
+      left: 17vmin;
       transform: rotate(-20deg);
       border-radius: 3vmin;
-      left: 17vmin;
-      top: -2.05vmin;
     }
   }
 
@@ -134,8 +134,8 @@ body {
       width: 1vmin;
       height: 1vmin;
       background: $bg-color;
-      left: -0.5vmin;
       top: -0.5vmin;
+      left: -0.5vmin;
     }
   }
 
@@ -143,25 +143,24 @@ body {
     width: 67vmin;
     height: 9.2vmin;
     background: transparent;
-    position: relative;
     top: 70.8vmin;
     left: -5vmin;
+    position: relative;
 
     .t {
       width: 10vmin;
       height: 1.6vmin;
       background: $logo-color;
-      left: -46.4vmin;
       top: -7.2vmin;
-      border-bottom-right-radius: 4vmin;
-      border-bottom-left-radius: 4vmin;
+      left: -46.4vmin;
+      border-radius: 0 0 4vmin 4vmin;
 
       &::before {
         width: 1.5vmin;
         height: 7.5vmin;
         background: $logo-color;
-        left: 4.25vmin;
         top: 0.3vmin;
+        left: 4.25vmin;
       }
     }
 
@@ -169,27 +168,25 @@ body {
       width: 9vmin;
       height: 1.6vmin;
       background: $logo-color;
-      left: -19.8vmin;
       top: -7.2vmin;
-      border-bottom-right-radius: 4vmin;
-      border-bottom-left-radius: 4vmin;
+      left: -19.8vmin;
+      border-radius: 0 0 4vmin 4vmin;
 
       &::before {
         width: 9vmin;
         height: 1.6vmin;
         background: $logo-color;
-        border-bottom-right-radius: 4vmin;
-        border-bottom-left-radius: 4vmin;
         top: 3.1vmin;
+        border-bottom-right-radius: 4vmin;
+        border-radius: 0 0 4vmin 4vmin;
       }
 
       &::after {
         width: 9vmin;
         height: 1.6vmin;
         background: $logo-color;
-        border-bottom-right-radius: 4vmin;
-        border-bottom-left-radius: 4vmin;
         top: 6.3vmin;
+        border-radius: 0 0 4vmin 4vmin;
       }
     }
 
@@ -197,9 +194,9 @@ body {
       width: 8.7vmin;
       height: 1.6vmin;
       background: $logo-color;
-      left: 6.8vmin;
       top: -7.2vmin;
-      border-bottom-right-radius: 4vmin;
+      left: 6.8vmin;
+      border-radius: 0 0 4vmin 0;
 
       &::before {
         width: 1.56vmin;
@@ -219,16 +216,16 @@ body {
       width: 8.9vmin;
       height: 1.4vmin;
       background: $logo-color;
-      left: 6.3vmin;
       top: 5.3vmin;
-      border-top-left-radius: 4vmin;
+      left: 6.3vmin;
+      border-radius: 4vmin 0 0 0;
 
       &::before {
         width: 1.6vmin;
         height: 4.3vmin;
         background: $logo-color;
-        left: 7.5vmin;
         top: -2.9vmin;
+        left: 7.5vmin;
       }
     }
 
@@ -236,15 +233,15 @@ body {
       width: 1.5vmin;
       height: 7.85vmin;
       background: $logo-color;
-      left: 25.7vmin;
       top: -0.9vmin;
+      left: 25.7vmin;
 
       &::before {
         width: 8.4vmin;
         height: 1.4vmin;
         background: $logo-color;
         top: 6.5vmin;
-        border-bottom-right-radius: 4vmin;
+        border-radius: 0 0 4vmin 0;
       }
     }
 
@@ -252,25 +249,24 @@ body {
       width: 9vmin;
       height: 1.6vmin;
       background: $logo-color;
-      border-bottom-right-radius: 4vmin;
-      border-bottom-left-radius: 4vmin;
-      left: 56.2vmin;
       top: -7.2vmin;
+      left: 56.2vmin;
+      border-radius: 0 0 4vmin 4vmin;
 
       &::before {
         width: 8.7vmin;
         height: 4.6vmin;
         background: $logo-color;
-        left: 0.2vmin;
         top: 3.2vmin;
+        left: 0.2vmin;
       }
 
       &::after {
         width: 5.6vmin;
         height: 3.2vmin;
         background: $bg-color;
-        left: 1.7vmin;
         top: 4.7vmin;
+        left: 1.7vmin;
       }
     }
   }
